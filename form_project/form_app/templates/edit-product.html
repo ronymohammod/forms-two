@@ -1,0 +1,12 @@
+{% extends 'master/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <h1>Edit product</h1>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% load crispy_forms_tags %}
+    {{ form_data|crispy}}
+
+    <button type="submit" class="btn btn-primary">Edit product</button>
+  </form>
+{% endblock %}
